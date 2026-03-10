@@ -497,6 +497,83 @@ footer p { font-size: 12px; color: var(--md-on-surface-variant); letter-spacing:
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-thumb { background: rgba(139,105,20,0.3); border-radius: 4px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .nav-links { gap: 4px; }
+  .nav-links a { padding: 6px 10px; font-size: 11px; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 100px 20px 48px;
+    gap: 32px;
+    min-height: unset;
+  }
+
+  .hero h1 { font-size: clamp(52px, 16vw, 80px); }
+  .hero-sub { font-size: 15px; }
+
+  .profile-card {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .section { padding: 60px 20px; }
+
+  .card-grid,
+  .card-grid.two,
+  .card-grid.four {
+    grid-template-columns: 1fr;
+  }
+  .m-card.span2 { grid-column: span 1; }
+  .m-card.tall  { grid-row: span 1; }
+
+  .startup-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 32px 24px;
+  }
+  .startup-name { font-size: 52px; }
+  .startup-body {
+    grid-template-columns: 1fr;
+    padding: 28px 24px;
+    gap: 28px;
+  }
+
+  .contact-grid { flex-direction: column; }
+  .contact-card { min-width: unset; }
+
+  .skills-wrap { gap: 8px; }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 24px 20px;
+  }
+
+  .fab { bottom: 20px; right: 20px; }
+
+  .hero-chips { gap: 8px; }
+  .chip { font-size: 12px; padding: 7px 14px; }
+}
+
+@media (max-width: 480px) {
+  .nav-name { font-size: 16px; }
+  .nav-links a { font-size: 10px; padding: 5px 8px; }
+  .hero h1 { font-size: clamp(44px, 18vw, 64px); }
+  .sec-title { font-size: 28px; }
+  .startup-name { font-size: 40px; }
+  .card-num { font-size: 52px; }
+}
+
 </style>
 </head>
 <body>
